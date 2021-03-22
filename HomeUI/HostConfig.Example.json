@@ -1,0 +1,16 @@
+{
+  "WOLHosts": [
+    {
+      "FriendlyName": "PC1",
+      "MacAddress": "FF:FF:FF:FF:FF:FF",
+      "BroadcastIP": "192.168.1.2",
+      "Description":  "PC1"
+    },
+    {
+      "FriendlyName": "PC2",
+      "MacAddress": "FF:FF:FF:FF:FF:FF",
+      "BroadcastIP": "192.168.1.3",
+      "Description":  "PC2"
+    }
+  ]
+}

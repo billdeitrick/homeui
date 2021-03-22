@@ -1,0 +1,18 @@
+﻿@model HomeUI.Models.WOLIndexViewModel
+@addTagHelper *, Vereyon.Web.FlashMessage
+
+@{
+    ViewData["Title"] = "Wake PC";
+}
+
+<flash dismissable="true"/>
+
+<h1>Select PC to Wake</h1>
+
+<form asp-action="Wake">
+    @foreach (var host in Model.wolHosts)
+    {
+        <p>@Html.RadioButtonFor(m => m.selectedHostId, host.id, new { @id = $"selectHost{host.id}" }) <label for="@($"selectHost{host.id}")">🖥 @host.FriendlyName (@host.Description)</label></p>
+    }
+    <input type="submit" value="Wake" class="btn btn-primary" />
+</form>
