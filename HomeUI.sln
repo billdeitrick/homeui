@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		ReadMe.md = ReadMe.md
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeWOL", "HomeWOL\HomeWOL.csproj", "{BBBB3757-0CF8-41B5-9B9B-0CC00A945DE2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeWOLTests", "HomeWOLTests\HomeWOLTests.csproj", "{FB274A7C-7387-4FCE-8CCC-8F19A01EFBE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{B6E76B16-5A52-4C45-85E8-ABC15BB2FC1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6E76B16-5A52-4C45-85E8-ABC15BB2FC1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6E76B16-5A52-4C45-85E8-ABC15BB2FC1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBBB3757-0CF8-41B5-9B9B-0CC00A945DE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBBB3757-0CF8-41B5-9B9B-0CC00A945DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBBB3757-0CF8-41B5-9B9B-0CC00A945DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBBB3757-0CF8-41B5-9B9B-0CC00A945DE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB274A7C-7387-4FCE-8CCC-8F19A01EFBE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB274A7C-7387-4FCE-8CCC-8F19A01EFBE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB274A7C-7387-4FCE-8CCC-8F19A01EFBE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB274A7C-7387-4FCE-8CCC-8F19A01EFBE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
