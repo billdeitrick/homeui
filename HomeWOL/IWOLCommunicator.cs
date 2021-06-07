@@ -1,9 +1,9 @@
 ﻿using System.Net;
 using System.Threading.Tasks;
 
-namespace HomeUI.HomeWOL
+namespace HomeWol
 {
-    public interface IWOLCommunicator
+    internal interface IWolCommunicator
     {
         /// <summary>
         /// The port over which communication will be sent/receved.

@@ -3,18 +3,25 @@ using System.Net;
 using System.Net.NetworkInformation;
 using System.Collections.Generic;
 
-namespace HomeUI.HomeWOL
+namespace HomeWol
 {
-    public class HomeWOL
+    public class HomeWol
     {
-        private IWOLCommunicator Communicator;
+        private readonly IWolCommunicator _communicator;
 
         /// <summary>
-        /// The HomeWOL class is a custom Wake-On-LAN utility.
+        /// The HomeWol class isa custom Wake-On-LAN utility.
         /// </summary>
-        /// <param name="communicator">The WOLCommunicator instance to be used by this HomeWOL instance.</param>
-        public HomeWOL(IWOLCommunicator communicator) {
-            Communicator = communicator;
+        /// <param name="port"></param>
+        [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+        public HomeWol(int port) : this(new WolCommunicator(port)) { }
+
+        /// <summary>
+        /// The HomeWol class is a custom Wake-On-LAN utility.
+        /// </summary>
+        /// <param name="communicator">The WolCommunicator instance to be used by this HomeWol instance.</param>
+        internal HomeWol(IWolCommunicator communicator) {
+            _communicator = communicator;
         }
 
         /// <summary>
@@ -31,7 +38,7 @@ namespace HomeUI.HomeWOL
                 payload.AddRange(mac.GetAddressBytes());
             }
 
-            return await Communicator.SendAsync(payload.ToArray(), address);
+            return await _communicator.SendAsync(payload.ToArray(), address);
         }
 
         /// <summary>
@@ -43,7 +50,7 @@ namespace HomeUI.HomeWOL
         public async Task<int> Wake(string mac, string address)
         {
 
-            return await Wake(MacStringToPhysicalAdress(mac), IPStringToIPAddress(address));
+            return await Wake(MacStringToPhysicalAdress(mac), IpStringToIpAddress(address));
 
         }
 
@@ -71,7 +78,7 @@ namespace HomeUI.HomeWOL
         /// </summary>
         /// <param name="ip">The IPAddress in decimal, with octets separated by a ".".</param>
         /// <returns>The result of the conversion.</returns>
-        public static IPAddress IPStringToIPAddress(string ip)
+        public static IPAddress IpStringToIpAddress(string ip)
         {
 
             var split = ip.Split(".");
